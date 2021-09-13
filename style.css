@@ -1,0 +1,400 @@
+/*
+Theme name: WpP blog
+Author: Bojan Vulic
+Description: simple blog WP theme
+Version: 1.0
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Pacifico&display=swap");
+:root {
+    --bodyText: 'Open Sans', sans-serif;
+    --primaryColor: #101820FF;
+    --secondaryColor: #F2AA4CFF;
+    --white: #fff;
+    --lightGray: #f2f2f2;
+    --font: 16px;
+    --transition: .3s ease;
+    --borderRadius: 5px;
+    --boxShadow: 0 5px 15px #959191;
+    --marginTop: 50px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--bodyText);
+    color: var(--primaryColor);
+    font-size: var(--font);
+    background-image: url(img/bg.png);
+    background-repeat:  no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px 0;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+.btn {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: var(--borderRadius);
+    background: var(--primaryColor);
+    color: var(--white);
+    margin: 20px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.btn:hover {
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+    transition: var(--transition);
+    cursor: pointer;
+} 
+/*********************************
+nav
+***********************************/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+}
+nav .logo {
+    background: var(--primaryColor);
+    text-decoration: none;
+    padding: 10px 25px;
+    color: var(--white);
+    border-radius: var(--borderRadius);
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li a{
+    margin-left: 40PX;
+    text-decoration: none;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+nav ul li a:hover {
+    color: var(--secondaryColor);
+    transition: var(--transition);
+    
+}
+/*********************************
+header
+***********************************/
+header {
+    background: var(--secondaryColor);
+    opacity: .9;
+    padding: 50px;
+    text-align: center;
+    box-shadow: var(--boxShadow);
+      border-radius: var(--borderRadius);
+}
+header h1 {
+    font-size: 4rem;
+}
+header h3 {
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+/*********************************
+postovi
+***********************************/
+.posts {
+    margin-top: var(--marginTop);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.posts article img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+
+}
+.posts article {
+    flex: 0 0 31%;
+    box-shadow: var(--boxShadow);
+    border-radius: var(--borderRadius);
+}
+.posts article .text {
+    padding: 30px;
+    background: var(--white);
+    text-align: center;
+    position: relative;
+    top: -5px;
+  
+}
+.posts article .text h3 {
+    font-size: 2rem;
+}
+.posts article .text hr {
+    margin: 20px 0;
+}
+.posts article .text p {
+    text-align: justify;
+      margin-bottom: 30px;
+}
+.meta a {
+    color: var(--secondaryColor);
+}
+.meta a:hover {
+    color: var(--primaryColor);
+    transition: var(--transition);
+}
+.featured-image img {
+    width: 100%;
+    height: auto;
+}
+/*********************************
+footer
+***********************************/
+footer {
+  margin-top: var(--marginTop);  
+}
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--secondaryColor);
+    padding: 30px;
+     box-shadow: var(--boxShadow);
+    border-radius: var(--borderRadius);
+    opacity: .9;
+}
+footer .container article:nth-child(1){
+    flex: 2;
+}
+footer .container article:nth-child(2){
+    flex: 1;
+}
+footer .container article:nth-child(2) ul{
+    list-style: none;
+}
+footer .container article:nth-child(2) ul li a{
+    text-decoration: none;
+}
+footer .container article:nth-child(3){
+    flex: 1;
+}
+footer a {
+    color: var(--primaryColor);
+}
+footer a:hover {
+    color: var(--white);
+    transition: var(--transition);
+}
+footer hr {
+    width: 100px;
+    height: 1px;
+    margin: 20px 0;
+    border: none;
+    background: var(--primaryColor);
+}
+footer h3 {
+    font-size: 2rem;
+}
+footer .container article:nth-child(3) i {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+/*********************************
+single
+***********************************/
+.single {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: var(--white);
+    padding: 30px;
+}
+.single article {
+    flex: 0 0 70%;
+}
+.single aside {
+    flex: 0 0 20%;
+}
+.single  aside ul {
+    list-style: none;
+    background: var(--white);
+    padding: 30px;
+    opacity: .9;
+    line-height: 2;
+    box-shadow: var(--boxShadow);
+    border-radius: var(--borderRadius);
+}
+.single  aside ul a {
+    font-size: 1.2rem;
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+.single  aside ul a:hover {
+    color: var(--secondaryColor);
+}
+.single  aside h3 {
+    font-size: 1.7rem;
+}
+.single  aside hr {
+    margin: 20px 0;
+}
+
+/*******************************
+        rightSidebar
+******************************/
+.rightSidebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.rightSidebar article img {
+    width: 100%;
+}
+.rightSidebar article {
+    flex: 0 0 25%;
+    box-shadow: var(--boxShadow);
+    border-radius: var(--borderRadius);
+}
+.rightSidebar article .text {
+    padding: 30px;
+    background: var(--white);
+    text-align: center;
+    position: relative;
+    opacity: .9;
+    top: -5px;
+  
+}
+.rightSidebar article .text h3 {
+    font-size: 2rem;
+}
+.rightSidebar article .text hr {
+    margin: 20px 0;
+}
+.rightSidebar article .text p {
+    text-align: justify;
+      margin-bottom: 30px;
+}
+.rightSidebar aside {
+    flex: 0 0 20%;
+}
+.rightSidebar  aside ul {
+    list-style: none;
+    background: var(--white);
+    padding: 30px;
+    opacity: .9;
+    line-height: 2;
+    box-shadow: var(--boxShadow);
+    border-radius: var(--borderRadius);
+}
+.rightSidebar  aside ul a {
+    font-size: 1.2rem;
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+.rightSidebar  aside ul a:hover {
+    color: var(--secondaryColor);
+}
+.rightSidebar  aside h3 {
+    font-size: 1.7rem;
+}
+.rightSidebar  aside hr {
+    margin: 20px 0;
+}
+
+/*********************************
+kontakt
+***********************************/
+.kontakt article {
+    box-shadow: none;
+    border-radius:  none;
+}
+.kontakt form {
+    display: flex;
+    flex-direction: column;
+}
+.kontakt form input,
+.kontakt form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--secondaryColor);
+    font-size: 1rem;
+    opacity: .9;
+   
+}
+.happyforms-flex {
+    width: 80%;
+    margin: auto!important;
+
+}
+.happyforms-powered-by a {
+    display: none;
+}
+/*********************************
+home
+***********************************/
+.home {
+    background: var(--white);
+    text-align: center;
+    margin-top: 50px;
+    opacity: .9;
+    padding: 50px;
+}
+.home h2 {
+    font-size: 3rem;
+}
+.home hr {
+    width: 50%;
+    margin: 20px auto;
+}
+.home p {
+    margin-bottom: 30px;
+}
+.home img {
+    width: 90%;
+}
+input#s, input#searchsubmit  {
+    height: 30px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+}
+input[type = submit] {
+    font-size: 12px!important;
+    padding: 5px;
+}
+  
+
+/************************************
+RESPONSIVE
+************************************/
+@media(max-width:760px) {
+    .container {
+        width: 90%;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav ul li a {
+        margin: 10px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .posts article, footer .container article:nth-child(1),
+    footer .container article:nth-child(2),
+    footer .container article:nth-child(3),
+    .rightSidebar article,
+    .rightSidebar aside{
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+    
+}
